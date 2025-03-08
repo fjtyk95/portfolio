@@ -3,21 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>マイウェブサイト</title>
+    <title>ポートフォリオ | クリエイティブワークス</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="cursor-follower"></div>
+    
     <header>
-        <h1>ようこそ</h1>
+        <div class="logo">
+            <h3>Portfolio</h3>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#works">作品</a></li>
+                <li><a href="#about">自己紹介</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
     </header>
-    
-    <main>
-        <p>これはGithub Pagesでホストされているウェブサイトです。</p>
-        <!-- 他のコンテンツをここに追加 -->
-    </main>
-    
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="glitch-text">クリエイティブ<br>ポートフォリオ</h1>
+            <p>デザイン・開発・創造性を追求する私の作品集</p>
+            <a href="#works" class="btn-primary">作品を見る</a>
+        </div>
+        <div class="hero-image">
+            <div class="shape"></div>
+        </div>
+    </section>
+
+    <section id="works" class="works">
+        <h2 class="section-title">作品集</h2>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">すべて</button>
+            <button class="filter-btn" data-filter="web">ウェブ</button>
+            <button class="filter-btn" data-filter="design">デザイン</button>
+            <button class="filter-btn" data-filter="app">アプリ</button>
+        </div>
+        
+        <div class="projects-grid">
+            <div class="project-card" data-category="web">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/600x400" alt="プロジェクト1">
+                </div>
+                <div class="project-info">
+                    <h3>プロジェクト名 1</h3>
+                    <p>ウェブデザイン / 開発</p>
+                    <a href="#" class="btn-view">詳細を見る</a>
+                </div>
+            </div>
+            
+            <div class="project-card" data-category="design">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/600x400" alt="プロジェクト2">
+                </div>
+                <div class="project-info">
+                    <h3>プロジェクト名 2</h3>
+                    <p>グラフィックデザイン</p>
+                    <a href="#" class="btn-view">詳細を見る</a>
+                </div>
+            </div>
+            
+            <div class="project-card" data-category="app">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/600x400" alt="プロジェクト3">
+                </div>
+                <div class="project-info">
+                    <h3>プロジェクト名 3</h3>
+                    <p>モバイルアプリ開発</p>
+                    <a href="#" class="btn-view">詳細を見る</a>
+                </div>
+            </div>
+            
+            <div class="project-card" data-category="web">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/600x400" alt="プロジェクト4">
+                </div>
+                <div class="project-info">
+                    <h3>プロジェクト名 4</h3>
+                    <p>ウェブサイト制作</p>
+                    <a href="#" class="btn-view">詳細を見る</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2 class="section-title">自己紹介</h2>
+            <p>クリエイティブな問題解決とユーザー体験を大切にするデザイナー・開発者です。新しい技術とデザインのトレンドに常に興味を持ち、革新的なプロジェクトに取り組んでいます。</p>
+            
+            <div class="skills">
+                <h3>スキル</h3>
+                <div class="skill-bars">
+                    <div class="skill">
+                        <span>HTML/CSS</span>
+                        <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <span>JavaScript</span>
+                        <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <span>UI/UXデザイン</span>
+                        <div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <span>React</span>
+                        <div class="skill-bar"><div class="skill-level" style="width: 75%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-image">
+            <img src="https://via.placeholder.com/400x500" alt="プロフィール写真">
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">お問い合わせ</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>お気軽にご連絡ください</h3>
+                <p>新しいプロジェクトや協業のご相談をお待ちしています。</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>email@example.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>090-1234-5678</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>東京都渋谷区</span>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="お名前" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="メールアドレス" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="件名">
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="メッセージ" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">送信する</button>
+            </form>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2023 マイウェブサイト</p>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>Portfolio</h3>
+            </div>
+            <p>&copy; 2023 ポートフォリオサイト - All Rights Reserved</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
