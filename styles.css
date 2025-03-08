@@ -411,21 +411,23 @@ section {
 
 .social-links {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .social-links a {
   width: auto;
+  min-width: 40px;
   height: 40px;
   background: #eee;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 1rem;
   color: var(--dark-color);
   transition: var(--transition);
   padding: 0 15px;
-  margin-bottom: 10px;
+  text-decoration: none;
 }
 
 .social-links a i {
@@ -433,8 +435,9 @@ section {
 }
 
 .social-links a span {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .social-links a:hover {
@@ -452,17 +455,19 @@ section {
   border: 1px solid #ddd;
   border-radius: 5px;
   font-family: inherit;
+  font-size: 1rem;
   transition: var(--transition);
 }
 
 .form-group textarea {
-  height: 150px;
-  resize: none;
+  min-height: 150px;
+  resize: vertical;
 }
 
 .form-group input:focus, .form-group textarea:focus {
   outline: none;
   border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(108, 99, 255, 0.1);
 }
 
 .btn-submit {
@@ -590,6 +595,7 @@ footer {
 
 /* お問い合わせページのスタイル */
 .contact-page {
+  min-height: calc(100vh - 200px);
   padding-top: 120px;
   padding-bottom: 6rem;
 }
@@ -622,6 +628,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
+  align-items: start;
 }
 
 .social-links-detailed {
@@ -679,6 +686,7 @@ footer {
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  height: fit-content;
 }
 
 .contact-form-container h3 {
@@ -690,6 +698,7 @@ footer {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
+  color: var(--dark-color);
 }
 
 .contact-cta {
@@ -701,9 +710,19 @@ footer {
 @media (max-width: 768px) {
   .contact-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .social-links {
+    justify-content: center;
   }
   
   .social-links a {
-    margin-bottom: 10px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .contact-page {
+    padding-top: 100px;
   }
 } 
