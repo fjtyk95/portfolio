@@ -855,4 +855,41 @@ footer {
   .social-handle {
     max-width: 150px;
   }
+}
+
+/* ヒーローボタングループ */
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.hero-buttons .btn-primary {
+  min-width: 140px;
+  text-align: center;
+}
+
+/* メールリンク */
+.contact-item a {
+  color: var(--dark-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.contact-item a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 576px) {
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .hero-buttons .btn-primary {
+    width: 100%;
+  }
 } 
