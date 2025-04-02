@@ -8,25 +8,14 @@
       "use": "@vercel/static"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/",
-      "dest": "/index.html"
+      "source": "/",
+      "destination": "/index.html"
     },
     {
-      "src": "/contact",
-      "dest": "/contact.html"
-    },
-    {
-      "src": "^/images/(.*)",
-      "dest": "/images/$1"
-    },
-    {
-      "src": "^/styles.css",
-      "dest": "/styles.css"
-    },
-    {
-      "handle": "filesystem"
+      "source": "/contact",
+      "destination": "/contact.html"
     }
   ]
 } 
