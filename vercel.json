@@ -2,21 +2,31 @@
   "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
-  "build": {
-    "env": {
-      "SKIP_BUILD": "true"
-    }
-  },
   "builds": [
     {
-      "src": "**",
+      "src": "**/*",
       "use": "@vercel/static"
     }
   ],
-  "redirects": [
+  "routes": [
     {
-      "source": "/",
-      "destination": "/index.html"
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/contact",
+      "dest": "/contact.html"
+    },
+    {
+      "src": "^/images/(.*)",
+      "dest": "/images/$1"
+    },
+    {
+      "src": "^/styles.css",
+      "dest": "/styles.css"
+    },
+    {
+      "handle": "filesystem"
     }
   ]
 } 
